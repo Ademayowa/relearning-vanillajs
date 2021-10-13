@@ -42,6 +42,7 @@ function subtract() {
   currentResult -= enteredNumber;
   currentResult = currentResult - enteredNumber;
   createAndWriteOutput('-', initialResult, enteredNumber);
+  writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
 }
 
 function multiply() {
@@ -50,6 +51,7 @@ function multiply() {
   // currentResult = currentResult * enteredNumber;
   currentResult *= enteredNumber;
   createAndWriteOutput('*', initialResult, enteredNumber);
+  writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
 }
 
 function divide() {
@@ -58,6 +60,7 @@ function divide() {
   // currentResult = currentResult / enteredNumber;
   currentResult /= enteredNumber;
   createAndWriteOutput('/', initialResult, enteredNumber);
+  writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
 }
 
 addBtn.addEventListener('click', add);
